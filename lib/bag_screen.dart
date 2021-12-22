@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'helper.dart';
+import 'models/book.dart';
+import 'models/helper.dart';
 
 class BagScreen extends StatefulWidget {
   const BagScreen({Key? key}) : super(key: key);
@@ -10,13 +11,13 @@ class BagScreen extends StatefulWidget {
 }
 
 class _BagScreenState extends State<BagScreen> {
-  List<String> books = [];
+  List<Book> books = [];
 
   @override
   void initState() {
     super.initState();
 
-    books = Helper.getBagBooks();
+    books = Helper.getBooks();
   }
 
   @override
@@ -29,9 +30,8 @@ class _BagScreenState extends State<BagScreen> {
         child: ListView.builder(
             itemCount: books.length,
             itemBuilder: (context, index) {
-              var appName = books[index];
               return ListTile(
-                title: Text(appName),
+                title: Text(books.elementAt(index).title),
                 leading: Icon(Icons.shopping_bag),
               );
             }),
