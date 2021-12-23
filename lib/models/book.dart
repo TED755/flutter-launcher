@@ -1,7 +1,3 @@
-import 'dart:html';
-
-import 'package:http/retry.dart';
-
 class Book {
   final String id;
   final String author;

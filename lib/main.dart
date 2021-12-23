@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_launcher/bag_screen.dart';
-import 'package:flutter_launcher/main_screen.dart';
+import 'package:flutter_launcher/pages/bag_screen.dart';
+import 'package:flutter_launcher/pages/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
