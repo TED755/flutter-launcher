@@ -46,13 +46,6 @@ class _QuickViewState extends State<QuickView> {
                   ],
                 ))
           ],
-        ) /*Widget.builder(
-          itemCount: 10,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text("Hui"),
-            );
-          }),*/
-        );
+        ));
   }
 }

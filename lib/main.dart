@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_launcher/pages/bag_screen.dart';
 import 'package:flutter_launcher/pages/main_screen.dart';
+import 'package:flutter_launcher/pages/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.green,
         ),
         home: PageView(
-          children: [MainScreen(), BagScreen()],
+          children: [Profile(), MainScreen(), BagScreen()],
         ));
   }
 }
