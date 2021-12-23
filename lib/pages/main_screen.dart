@@ -1,11 +1,6 @@
-import 'dart:convert';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_launcher/models/book.dart';
 import 'package:flutter_launcher/pages/quick_view.dart';
-import 'package:http/http.dart' as http;
-
 import 'package:flutter/material.dart';
-import 'package:flutter_launcher/models/api.dart';
 import 'package:flutter_launcher/models/helper.dart';
 
 class MainScreen extends StatefulWidget {
@@ -22,8 +17,6 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     books = Helper.getBooks();
-    //bag = Helper.getAllBooks();
-
     super.initState();
   }
 
@@ -53,37 +46,18 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                     ),
                     trailing: IconButton(
-                      // icon: Icon(Helper.isFavorite(books.elementAt(index))
-                      //     ? Icons.cancel
-                      //     : Icons.add),
                       icon: Icon(Icons.add),
                       onPressed: () {
                         setState(() {
-                          print("index: ${index}");
-                          print(Helper.bag.contains(books.elementAt(index)));
-                          //print(Helper.isFavorite(books.elementAt(index)));
                           if (Helper.isFavorite(books.elementAt(index))) {
-                            //bag.remove(books.elementAt(index));
                             Helper.removeBook(books.elementAt(index));
-                            //print(bag);
                           } else {
                             Helper.addBook(books.elementAt(index));
-                            //bag.add(books.elementAt(1));
-                            //print(bag);
-                            //print(books.elementAt(index).title);
-                            //print(bag);
                           }
-                          //print(bag.length);
                         });
                       },
                     ),
                     onLongPress: () {
-                      // Navigator.push(
-                      //     context,
-                      //     CupertinoPageRoute(
-                      //       builder: (_) =>
-                      //           QuickView(thisBook: books.elementAt(index)),
-                      //     ));
                       showDialog(
                           context: context,
                           builder: (context) {

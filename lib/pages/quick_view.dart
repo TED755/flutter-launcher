@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_launcher/models/book.dart';
 
@@ -41,7 +40,7 @@ class _QuickViewState extends State<QuickView> {
                           TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
                     Text(thisBook.author),
-                    Text("Количество страниц: ${thisBook.page_number}"),
+                    Text("Количество страниц: ${thisBook.pageNumber}"),
                     Text(thisBook.description),
                   ],
                 ))

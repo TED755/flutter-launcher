@@ -1,7 +1,5 @@
 import 'dart:convert';
-
 import 'package:flutter_launcher/models/api.dart';
-
 import 'book.dart';
 
 class Helper {
@@ -10,8 +8,6 @@ class Helper {
   static addBook(Book newBook) {
     if (!bag.contains(newBook)) {
       bag.add(newBook);
-      // print(bag.length);
-      // print(newBook.title);
     }
   }
 
@@ -22,8 +18,6 @@ class Helper {
   }
 
   static isFavorite(Book book) {
-    // print(bag.length);
-    // print(bag.contains(book));
     return bag.contains(book);
   }
 

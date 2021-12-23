@@ -3,12 +3,12 @@ class Book {
   final String author;
   final String title;
   final String description;
-  final String full_text;
-  final int page_number;
+  final String fullText;
+  final int pageNumber;
   final String icon;
 
-  Book(this.id, this.author, this.title, this.description, this.full_text,
-      this.icon, this.page_number);
+  Book(this.id, this.author, this.title, this.description, this.fullText,
+      this.icon, this.pageNumber);
 
   static Book handMade(id, title) {
     return Book(id, "author", title, "decription", "full_text", "None", 100);
